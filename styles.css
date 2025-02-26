@@ -293,6 +293,26 @@ a {
 }
 
 .content-container {
+    flex-direction: column;
+  }
+  
+  .text-content,
+  .carousel {
+    max-width: 100% !important;
+    width: 100%;
+  }
+  
+  .carousel {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  .carousel-images img {
+    min-height: 300px; /* Adjust this value as needed */
+    object-fit: cover;
+  }
+
+.content-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -551,14 +571,3 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Scroll Animation Styles */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
